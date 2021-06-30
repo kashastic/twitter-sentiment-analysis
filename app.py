@@ -71,7 +71,7 @@ def predict():
     tw_list["text"] = tw_list.text.str.lower()
     # print(tw_list.head(10))
 
-    #noOfTweets = len(tw_list)
+    noOfTweets = len(tw_list)
 
     # Calculating Negative, Positive, Neutral and Compound values
 
