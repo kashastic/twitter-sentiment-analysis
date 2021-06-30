@@ -37,11 +37,10 @@ def predict():
     str_keyword = input_string[0]
     numTweetsInp = int(input_string[1])
 
-    consumerKey ="YeCAgAX5OFNWZnVKAOqsosYCG"
-    consumerSecret = "rOWLmrnD6Qdqi7Pc4AocKgkhsFursa0zx09MAauf4xJE1efgbr"
-    accessToken = "1123581210683248640-q3EwtKJU4vK7JHvqYWOIWNLnkAZYej"
-    accessTokenSecret = "483Aciq0XbJTyhsjhP8mRMgxHLDTTh2MhCG4oiOCD8866"
-
+    consumerKey = os.getenv("consumerKey")
+    consumerSecret = os.getenv("consumerSecret")
+    accessToken = os.getenv("accessToken")
+    accessTokenSecret = os.getenv("accessTokenSecret")
     auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
     auth.set_access_token(accessToken, accessTokenSecret)
     api = tweepy.API(auth)
